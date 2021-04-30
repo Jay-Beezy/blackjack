@@ -2,7 +2,7 @@
  *
  *@file: card.cpp
  *@author: Jake Beesley
- *@assignment: EECS-448 project 3
+ *@assignment: EECS-448 project 4
  *@description: Header file for the card class, which works with the blackjack program
  *
  --------------------------------------------------------------*/
@@ -44,14 +44,39 @@ public:
   **/
   int getValue() const;
 
+  /**
+  * @pre A card object exists
+  * @post N/A
+  * @return the face of the card
+  **/
   std::string getFace() const;
 
+  /**
+  * @pre A card object exists
+  * @post N/A
+  * @return the suit of the card
+  **/
   std::string getSuit() const;
 
+  /**
+  * @pre A card object exists
+  * @post N/A
+  * @return True if both cards are the same, false otherwise
+  **/
   bool operator==(const card& rhs) const;
 
+  /**
+  * @pre A card object exists
+  * @post N/A
+  * @return True if both cards aren't the same, false otherwise
+  **/
   bool operator!=(const card& rhs) const;
 
+  /**
+  * @pre A card object exists
+  * @post N/A
+  * @return Sets a card's private members to another card
+  **/
   void operator=(const card& rhs);
 
 private:

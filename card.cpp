@@ -2,7 +2,7 @@
  *
  *@file: card.cpp
  *@author: Jake Beesley
- *@assignment: EECS-448 project 3
+ *@assignment: EECS-448 project 4
  *@description: Implementation file for the card class, which works with the blackjack program
  *
  --------------------------------------------------------------*/
@@ -30,14 +30,17 @@ int card::getValue() const{
   return(m_value);
 }
 
+//Returns the face of the card
 std::string card::getFace() const{
   return(m_face);
 }
 
+//Returns the suit of the card
 std::string card::getSuit() const{
   return(m_suit);
 }
 
+//Overload operator for the equivalence comparison
 bool card::operator==(const card& rhs) const{
   if(getFace() == rhs.getFace()){
     if(getValue() == rhs.getValue()){
@@ -52,6 +55,7 @@ bool card::operator==(const card& rhs) const{
   }
 }
 
+//Overload operator for the not-equals comparison
 bool card::operator!=(const card& rhs) const{
   if(getFace() != rhs.getFace()){
     if(getValue() != rhs.getValue()){
@@ -66,6 +70,7 @@ bool card::operator!=(const card& rhs) const{
   }
 }
 
+//Assignment operator for a card
 void card::operator=(const card& rhs)
 {
   m_value = rhs.m_value;
